@@ -13,8 +13,7 @@ This project implements test coverage for the Wizard Bank functionality.
   - Adding new customer
   - Adding new account for the customer
   - Deleting a customer
-  - Searching a customer information
-  - Returning to the Home page
+  - Searching a customer
 
 # How to run the tests
 
