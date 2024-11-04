@@ -6,6 +6,6 @@ export class AddCustomerPage {
   }
 
   async open() {
-    await this.page.goto('/angularJs-protractor/BankingProject/#/manager/addCust');
+    await this.page.goto('/angularJs-protractor/BankingProject/#/manager/openAccount');
   }
 }

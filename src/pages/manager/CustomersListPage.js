@@ -1,11 +1,11 @@
 const { expect } = require('@playwright/test');
 
-export class BankLoginPage {
+export class CustomersListPage {
   constructor(page) {
     this.page = page; 
   }
 
   async open() {
-    await this.page.open('/login');
+    await this.page.goto('/angularJs-protractor/BankingProject/#/manager/list');
   }
 }

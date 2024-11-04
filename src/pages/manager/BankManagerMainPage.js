@@ -6,6 +6,6 @@ export class BankManagerMainPage {
   }
 
   async open() {
-    await this.page.open('/manager');
+    await this.page.goto('/angularJs-protractor/BankingProject/#/manager');
   }
 }

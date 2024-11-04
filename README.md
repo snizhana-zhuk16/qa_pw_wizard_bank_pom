@@ -1,16 +1,18 @@
-# Playwright: Wizard Bank POM
+# Playwright: Wizard Bank test project
 
 This project adds test coverage for the Wizard Bank Manager functionality. 
 
 # Test coverage
 
-- Bank manager login
-- Adding new customer
-- Adding new account for the customer
-- Deleting a customer
-- Searching a customer information
-- Returning to the Home page
-- Customer's work with multiple transactions
+- Customer:
+  - Customer's work with multiple transactions
+- Manager:
+  - Bank manager login
+  - Adding new customer
+  - Adding new account for the customer
+  - Deleting a customer
+  - Searching a customer information
+  - Returning to the Home page
 
 # How to run the tests
 
@@ -23,7 +25,7 @@ npx playwright install
 ```bash
 npx playwright test --ui
 ```
- ## Run tests in Debug mode
+ ## Run tests in debug mode
 ```bash
 npx playwright test --debug
 ```
