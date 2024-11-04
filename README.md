@@ -1,11 +1,13 @@
 # Playwright: Wizard Bank test project
 
-This project adds test coverage for the Wizard Bank Manager functionality. 
+This project implements test coverage for the Wizard Bank functionality. 
 
 # Test coverage
 
 - Customer:
-  - Customer's work with multiple transactions
+  - Account Operations
+  - Logout
+  - Transactions
 - Manager:
   - Bank manager login
   - Adding new customer
