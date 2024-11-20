@@ -1,17 +1,13 @@
 # Practical task description
 
-## Pre-conditions
-1. Your GIT account must be linked to the platform to complete this task. If you do not know what this means, please use [this task](https://mate.academy/learn/qa-automation-basic/module-recap-next-stages?section=practice&theoryId=5911&learnItemsFilter=All&testTaskSlug=qa_wizard_bank_test_project) instructions instead. 
-
-2. Click the “Create Fork” button in the [task]() the platform. 
-3. Fork the repository.  
-3. Clone the forked repo in VSCode, open project
-4. Open Terminal in VSCode.
-5. Create a new branch using the command:
+## Pre-conditions 
+1. Clone your forked repo in VSCode, open the project
+2. Open Terminal in VSCode.
+3. Create a new branch using the command:
 ```bash
 git checkout -b e2e_testing
 ```
-6. Run the installation command:
+4. Run the installation command:
 ```bash
 npm i
 ```
