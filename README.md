@@ -1,6 +1,6 @@
 # Playwright: Wizard Bank test project
 
-This project implements test coverage for the Wizard Bank functionality. 
+This project implements test coverage for the [Wizard Bank](https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login) functionality. 
 
 ## Task description
 Please read the [instructions](TaskDescription.md) in order to complete this task.
