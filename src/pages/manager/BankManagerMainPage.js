@@ -1,8 +1,8 @@
-const { expect } = require('@playwright/test');
+import { expect } from '@playwright/test';
 
 export class BankManagerMainPage {
   constructor(page) {
-    this.page = page; 
+    this.page = page;
   }
 
   async open() {

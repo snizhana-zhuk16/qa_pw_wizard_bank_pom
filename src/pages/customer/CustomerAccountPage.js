@@ -1,18 +1,31 @@
-const { expect } = require('@playwright/test');
+import { expect } from '@playwright/test';
 
 export class CustomerAccountPage {
   constructor(page) {
-    this.page = page; 
+    this.page = page;
     this.accountIdDropDown = page.getByTestId('accountSelect');
-    this.accountDataLine = page.locator('div').filter({ hasText: 'Account Number' }).first();
+    this.accountDataLine = page
+      .locator('div')
+      .filter({
+        hasText: 'Account Number',
+      })
+      .first();
     this.depositButton = page.getByRole('button', { name: 'Deposit' });
-    this.transactionsButton = page.getByRole('button', { name: 'Transactions' });
-    this.withdrawlButton =page.getByRole('button', { name: 'Withdraw' });
+    this.transactionsButton = page.getByRole('button', {
+      name: 'Transactions',
+    });
+    this.withdrawlButton = page.getByRole('button', { name: 'Withdraw' });
     this.amountInputField = page.getByPlaceholder('amount');
-    this.depositFormButton = page.getByRole('form').getByRole('button', { name: 'Deposit' });
+    this.depositFormButton = page.getByRole('form').getByRole('button', {
+      name: 'Deposit',
+    });
     this.depositSuccessfulMessage = page.getByText('Deposit Successful');
-    this.withdrawlFormButton = page.getByRole('form').getByRole('button', { name: 'Withdraw' });
-    this.withdrawNoBalanceErrorMessage = page.getByText('Transaction Failed. You can not withdraw amount more than the balance.');
+    this.withdrawlFormButton = page.getByRole('form').getByRole('button', {
+      name: 'Withdraw',
+    });
+    this.withdrawNoBalanceErrorMessage = page.getByText(
+      'Transaction Failed. You can not withdraw amount more than the balance.',
+    );
     this.logoutButton = page.getByRole('button', { name: 'Logout' });
   }
 
@@ -21,8 +34,8 @@ export class CustomerAccountPage {
   }
 
   async assertAccountIdInDropDownHasValue(value) {
-    const accountNumberInDrodown = await this.accountIdDropDown.inputValue();
-    expect(accountNumberInDrodown).toBe(value);
+    const accountNumberInDrodown = this.accountIdDropDown;
+    await expect(accountNumberInDrodown).toHaveValue(value);
   }
 
   async assertAccountLineContainsText(text) {

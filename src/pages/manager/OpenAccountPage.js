@@ -1,11 +1,13 @@
-const { expect } = require('@playwright/test');
+import { expect } from '@playwright/test';
 
 export class AddCustomerPage {
   constructor(page) {
-    this.page = page; 
+    this.page = page;
   }
 
   async open() {
-    await this.page.goto('/angularJs-protractor/BankingProject/#/manager/openAccount');
+    await this.page.goto(
+      '/angularJs-protractor/BankingProject/#/manager/openAccount',
+    );
   }
 }

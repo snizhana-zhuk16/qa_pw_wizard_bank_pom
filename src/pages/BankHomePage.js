@@ -1,9 +1,11 @@
-const { expect } = require('@playwright/test');
+import { expect } from '@playwright/test';
 
 export class BankHomePage {
   constructor(page) {
-    this.page = page; 
-    this.customerLoginButton = page.getByRole('button', { name: 'Customer Login' });
+    this.page = page;
+    this.customerLoginButton = page.getByRole('button', {
+      name: 'Customer Login',
+    });
   }
 
   async open() {

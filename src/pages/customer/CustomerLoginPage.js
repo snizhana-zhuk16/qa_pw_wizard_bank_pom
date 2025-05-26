@@ -1,8 +1,8 @@
-const { expect } = require('@playwright/test');
+import { expect } from '@playwright/test';
 
 export class CustomerLoginPage {
   constructor(page) {
-    this.page = page; 
+    this.page = page;
     this.customerDropDown = page.getByTestId('userSelect');
     this.loginButton = page.getByRole('button', { name: 'Login' });
   }
@@ -12,7 +12,9 @@ export class CustomerLoginPage {
   }
 
   async waitForOpened() {
-    await this.page.waitForURL('/angularJs-protractor/BankingProject/#/customer');
+    await this.page.waitForURL(
+      '/angularJs-protractor/BankingProject/#/customer',
+    );
   }
 
   async selectCustomer(customerName) {
@@ -28,7 +30,7 @@ export class CustomerLoginPage {
   }
 
   async assertSelectCustomerDropdownContainsValue(value) {
-    const currentOptionText = await this.customerDropDown.inputValue();
-    expect(currentOptionText).toBe(value);
+    const currentOptionText = this.customerDropDown;
+    await expect(currentOptionText).toHaveValue(value);
   }
 }
