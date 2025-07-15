@@ -4,8 +4,8 @@ export class AddCustomerPage {
   constructor(page) {
     this.page = page;
     this.firstNamePlaceholder = page.getByPlaceholder('First Name');
-    this.lastNameInput = page.getByPlaceholder('Last Name');
-    this.postCodeInput = page.getByPlaceholder('Post Code');
+    this.lastNamePlaceholder = page.getByPlaceholder('Last Name');
+    this.postCodePlaceholder = page.getByPlaceholder('Post Code');
     this.addCustomerButton = page.getByRole('form').getByRole('button', { name: 'Add Customer' });
     this.viewCustomersButton = page.getByRole('button', { name: 'Customers' });
     this.openAccountButton = page.getByRole('button', { name: 'Open Account' });
