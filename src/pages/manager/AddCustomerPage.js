@@ -8,12 +8,7 @@ export class AddCustomerPage {
     this.postCodeInput = page.getByPlaceholder('Post Code');
     this.addCustomerButton = page.getByRole('form').getByRole('button', { name: 'Add Customer' });
     this.viewCustomersButton = page.getByRole('button', { name: 'Customers' });
-    
-
-
-
-
-
+    this.openAccountButton = page.getByRole('button', { name: 'Open Account' });
 
   }
 
@@ -46,6 +41,10 @@ export class AddCustomerPage {
 
   async clickCustomers() {
     await this.viewCustomersButton.click();
+  }
+
+  async clickOpenAccount() {
+    await this.openAccountButton.click();
   }
 
 
