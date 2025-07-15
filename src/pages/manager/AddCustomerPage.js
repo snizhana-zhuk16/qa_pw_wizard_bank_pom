@@ -28,11 +28,11 @@ export class AddCustomerPage {
   }
 
   async fillLastName(text) {
-    await this.lastNameInput.fill(text);
+    await this.lastNamePlaceholder.fill(text);
   }
 
   async fillPostCode(text) {
-    await this.postCodeInput.fill(text);
+    await this.postCodePlaceholder.fill(text);
   }
 
   async clickAddCustomer() {
